@@ -2,9 +2,9 @@ allowBuilds:
   esbuild: true
   spawn-sync: false
 catalog:
-  vite: npm:@voidzero-dev/vite-plus-core@latest
-  vite-plus: latest
-  vitest: npm:@voidzero-dev/vite-plus-test@latest
+  vite: 'https://pkg.pr.new/voidzero-dev/vite-plus/@voidzero-dev/vite-plus-core@1856'
+  vite-plus: 'https://pkg.pr.new/voidzero-dev/vite-plus@1856'
+  vitest: '4.1.9'
 overrides:
   vite: 'catalog:'
   vitest: 'catalog:'
@@ -16,3 +16,16 @@ peerDependencyRules:
   allowedVersions:
     vite: '*'
     vitest: '*'
+minimumReleaseAge: 60
+minimumReleaseAgeExclude:
+  - '@voidzero-dev/*'
+  - vite-plus
+  - '@vitest/*'
+  - vite
+  - vitest
+  - '@oxc-project/*'
+  - '@oxlint/*'
+  - oxlint
+  - oxfmt
+  - oxlint-tsgolint
+blockExoticSubdeps: false
